@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Proje.Models;
+using Proje.Models.Login;
 
 namespace Proje.Controllers
 {
@@ -12,8 +13,23 @@ namespace Proje.Controllers
         NarailDBEntities db = new NarailDBEntities();
         public ActionResult Index()
         {
-            var model = db.Author.ToList();
+            return View(db.Admin.ToList());
+        }
+
+
+        public ActionResult Login()
+        {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(string username , string password)
+        {
+            if (new LoginState().IsLoginSucces(username,password))
+            {
+                return RedirectToAction("Index", "Author");
+            }
+            return RedirectToAction("Index","Login");
         }
     }
 }

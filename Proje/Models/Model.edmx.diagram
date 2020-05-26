@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="cc960e480a3d4e9fac1b693f0977aada" Name="Diagram1">
         <EntityTypeShape EntityType="NarailDBModel.Author" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NarailDBModel.Admin" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

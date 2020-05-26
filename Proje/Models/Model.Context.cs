@@ -26,5 +26,6 @@ namespace Proje.Models
         }
     
         public virtual DbSet<Author> Author { get; set; }
+        public virtual DbSet<Admin> Admin { get; set; }
     }
 }
