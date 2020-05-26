@@ -1,0 +1,143 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<!--Contact Us kısmı-->
+    <div class="inner-banner has-base-color-overlay text-center" style="background: url(/Content/Site/images/background/1.jpg);">
+        <div class="container">
+            <div class="box">
+                <h3>İletişim</h3>
+            </div><!-- /.box -->
+        </div><!-- /.container -->
+    </div>
+
+
+
+
+
+<!--Anasayfa>İletişim kısmı-->
+    <div class="breadcumb-wrapper">
+        <div class="container">
+            <div class="pull-left">
+                <ul class="list-inline link-list">
+                    <li>
+                        <a href="@Url.Action("","")">Anasayfa</a>
+                    </li>
+                    <!-- comment for inline hack
+                -->
+                    <li>
+                        İletişim
+                    </li>
+                </ul><!-- /.list-line -->
+            </div><!-- /.pull-left -->
+        </div><!-- /.container -->
+    </div>
+
+
+
+
+<!--Bize ulaşın - İletişim Bilgilerimiz kısmı-->
+    <section class="contact_us">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-8 col-sm-12 col-xs-12">
+                    <div class="sec-title">
+                        <h2>Bize Ulaşın</h2>
+                    </div>
+                    <div class="default-form-area">
+                        <form id="contact-form" name="contact_form" class="default-form" action="inc/sendmail.php" method="post" novalidate="novalidate">
+                            <div class="row clearfix">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+
+                                    <div class="form-group">
+                                        <input type="text" name="form_name" class="form-control" value="" placeholder="Ad*" required="" aria-required="true">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <input type="email" name="form_email" class="form-control required email" value="" placeholder="E-posta*" required="" aria-required="true">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <input type="text" name="form_phone" class="form-control" value="" placeholder="Telefon">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <input type="text" name="form_subject" class="form-control" value="" placeholder="Konu">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <textarea name="form_message" class="form-control textarea required" placeholder="Mesaj...." aria-required="true"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
+                                        <button class="btn-style-one" type="submit" data-loading-text="Please wait...">Mesajı Gönder</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-8 col-xs-12">
+                    <div class="sec-title">
+                        <h2>İletişim Bilgilerimiz</h2>
+                    </div>
+                    <br>
+                    <div class="default-cinfo">
+
+                        <div class="acc-content collapsed">
+                            <ul class="contact-infos">
+                                <li>
+                                    <div class="icon_box">
+                                        <i class="fa fa-map-marker"></i>
+                                    </div><!-- /.icon-box -->
+                                    <div class="text-box">
+                                        <p><b>Adresimiz:</b> <br> Mebusevleri / Ankara</p>
+                                    </div><!-- /.text-box -->
+                                </li>
+                                <li>
+                                    <div class="icon_box">
+                                        <i class="fa fa-phone"></i>
+                                    </div><!-- /.icon-box -->
+                                    <div class="text-box">
+                                        <p><b>Telefonumuz:</b> <br> +0555 444 33 22</p>
+                                    </div><!-- /.text-box -->
+                                </li>
+                                <li>
+                                    <div class="icon_box">
+                                        <i class="fa fa-envelope"></i>
+                                    </div><!-- /.icon-box -->
+                                    <div class="text-box">
+                                        <p><b>Mailimiz:</b> <br> narail@info.com</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+<!--Map kısmı-->
+    <div class="map-section">
+        <div class="map-outer">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.4336232962746!2d32.83286001474538!3d39.931689292920225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34ee1390752c7%3A0x73d878259a1e2891!2zTWVidXNldmxlcmksIFPDvHNsw7wgU2suIE5vOjEwLCAwNjU3MCDDh2Fua2F5YS9BbmthcmE!5e0!3m2!1str!2str!4v1589037446470!5m2!1str!2str" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> 
+        </div>
+    </div>

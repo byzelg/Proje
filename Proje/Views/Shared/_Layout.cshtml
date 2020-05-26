@@ -1,0 +1,353 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@(Html.Raw(ViewBag.title))</title>  <!--geldiği sayfanın başlığını kullanacak, controllerlarda belirtildi-->
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <link rel="stylesheet" href="@Url.Content("~/Content/Site/css/style.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/Site/css/responsive.css")">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+
+</head>
+<body>
+
+    <div class="boxed_wrapper">
+
+        <header class="top-bar">
+            <div class="container">
+                <div class="clearfix">
+                    <ul class="top-bar-text float_left">
+                        <li><i class="flaticon-telephone"></i>Telefon +0123-456-7890</li>
+                        <li><i class="flaticon-envelope"></i>beyzanurelgun@gmail.com</li>
+                    </ul>
+                    <ul class="social-style-one float_right hidden-xs">
+                        <!--hidden-xs kodu telefon boyutunda sosyal medya imgelerini gizlemeye yaradı-->
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+
+        <section class="mainmenu-area stricky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="main-logo">
+                            <a href="@Url.Action("","")"><img src="~/Content/Site/images/logo/logo.png" alt=""></a> <!--logoya tıklandığında "Anasayfa"ya gidilecek-->
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 menu-column">
+                        <nav class="main-menu">
+                            @*<div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>*@
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+
+                                    <li class="current">
+                                        <a href="@Url.Action("","")">Anasayfa</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="@Url.Action("Index","About")">Hakkımızda</a>
+                                        @*<ul>
+                                            <li><a href="about.html">Kimiz</a></li>
+                                            <li><a href="team.html">Takım</a></li>
+                                            <li><a href="testimonials.html">Testimonials</a></li>
+                                            <li><a href="error.html">404 Page</a></li>
+                                        </ul>*@
+                                    </li>
+
+                                    <li class="dropdown">
+                                        <a href="@Url.Action("Index","Project")">Projeler</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="@Url.Action("Index","Blog")">Blog</a>
+                                    </li>
+
+                                    @*<li><a href="contact.html">İletişim</a></li>*@
+                                </ul>
+
+
+
+
+
+                                <!--Bu kısım mobil kısmı-->
+
+                                <ul class="mobile-menu clearfix">
+
+                                    <li class="current">
+                                        <a href="@Url.Action("","")">Anasayfa</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="@Url.Action("Index","About")">Hakkımızda</a>
+                                        @*<ul>
+                                            <li><a href="about.html">Kimiz</a></li>
+                                            <li><a href="team.html">Takım</a></li>
+                                            <li><a href="testimonials.html">Testimonials</a></li>
+                                            <li><a href="error.html">404 Page</a></li>
+                                        </ul>*@
+                                    </li>
+
+                                    <li class="dropdown">
+                                        <a href="@Url.Action("Index","Project")">Projecler</a>
+                                    </li>
+
+
+                                    <li>
+                                        <a href="@Url.Action("Index","Blog")">Blog</a>
+                                    </li>
+
+                                    @*<li><a href="contact.html">Contact</a></li>*@
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="right-column">
+                            <div class="right-area">
+                                <div class="link-btn4 float_right">
+                                    <a href="@Url.Action("Index","Contact")" class="btn-style-one">İletişim</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        @RenderBody()          <!-- “<body></body>” etiketi içerisine "RenderBody()" kodu eklenerek View’den gelecek kodları çekiyorsunuz.-->
+                                <!--view içinde ilk tagda hangi layout ile çalıştığını görebilirsin (tüm Index viewler)-->
+
+
+        <footer class="main-footer">
+
+            <!--Widgets Section-->
+            <div class="widgets-section">
+                <div class="container">
+                    <div class="row">
+                        <!--Big Column-->
+                        <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                            <div class="row clearfix">
+
+                                <!--Footer Column-->
+                                <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                    <div class="footer-widget about-widget">
+                                        <figure class="footer-logo"><a href="index.html"><img src="images/logo/logo2.png" alt=""></a></figure>
+
+                                        <div class="widget-content">
+                                            <div class="text"><p>Narail kıvrımlı küresel bir danışmanlık firmasıdır. Büyük fikirler getiriyoruz ve normlara meydan okuyoruz. Müşterilerimizle çalışıyoruz, onlarla değil..</p> </div>
+
+                                            <ul class="social">
+                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Footer Column-->
+                                <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                    <div class="footer-widget service-widget">
+                                        <div class="section-title">
+                                            <h3>Servislerimiz</h3>
+                                        </div>
+                                        <div class="widget-content">
+                                            <ul class="list">
+                                                <li><a href="service-single.html">İş Büyümesi</a></li>
+                                                <li><a href="service-single.html">Pazar Araştırması</a></li>
+                                                <li><a href="service-single.html">Finansal Tavsiye</a></li>
+                                                <li><a href="service-single.html">Satış & Ticari</a></li>
+                                                <li><a href="service-single.html">Danışmanlık</a></li>
+                                                <li><a href="service-single.html">Risk Yönetimi</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--Big Column-->
+                        <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                            <div class="row clearfix">
+
+                                <!--Footer Column-->
+                                <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                    <div class="footer-widget links-widget">
+                                        <div class="section-title">
+                                            <h3>Hızlı Linkler</h3>
+                                        </div>
+                                        <div class="widget-content">
+                                            <ul class="list">
+                                                <li><a href="@Url.Action("Index","About")">Hakkımızda</a></li>
+                                                <li><a href="@Url.Action("Index","Project")">Projeler</a></li>
+                                                <li><a href="@Url.Action("Index","Blog")">Blog</a></li>
+                                                <li><a href="@Url.Action("Index","Contact")">İletişim</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!--Footer Column-->
+                                <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                    <div class="footer-widget contact-widget">
+                                        <div class="section-title">
+                                            <h3>instagram</h3>
+                                        </div>
+
+                                        <div class="footer-widget gallery-widget">
+                                            <div class="row clearfix">
+                                                <figure class="image">
+                                                    <img src="~/Content/Site/images/resource/fi1.jpg" alt="">
+                                                    <div class="link"><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></div>
+                                                </figure>
+
+                                                <figure class="image">
+                                                    <img src="~/Content/Site/images/resource/fi2.jpg" alt="">
+                                                    <div class="link"><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></div>
+                                                </figure>
+
+                                                <figure class="image">
+                                                    <img src="~/Content/Site/images/resource/fi3.jpg" alt="">
+                                                    <div class="link"><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></div>
+                                                </figure>
+
+                                                <figure class="image">
+                                                    <img src="~/Content/Site/images/resource/fi4.jpg" alt="">
+                                                    <div class="link"><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></div>
+                                                </figure>
+
+                                                <figure class="image">
+                                                    <img src="~/Content/Site/images/resource/fi5.jpg" alt="">
+                                                    <div class="link"><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></div>
+                                                </figure>
+
+                                                <figure class="image">
+                                                    <img src="~/Content/Site/images/resource/fi6.jpg" alt="">
+                                                    <div class="link"><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></div>
+                                                </figure>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--Footer Bottom-->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="pull-left copy-text">
+                        <p>Copyrights © 2018 All Rights Reserved by <a href="@Url.Action("","")"> Narail.</a></p>
+
+                    </div>
+                    <div class="pull-right get-text">
+                        <ul>
+                            <li><a href="@Url.Action("Index","Login")">Giriş Yap</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+        <!-- Yukarı Çık Butonu -->
+        <button class="scroll-top tran3s color2_bg">
+            <span class="fa fa-angle-up"></span>
+        </button>
+
+        <!-- pre loader , sayfaya önceden birşeylerin(resim gibi) yüklenmesini sağlayan class -->
+        <div class="preloader"></div>
+
+
+        <!-- jQuery js -->
+        <script src="@Url.Content("~/Content/Site/js/jquery.js")"></script>
+
+
+
+        <!-- bootstrap js -->
+        <script src="@Url.Content("~/Content/Site/js/bootstrap.min.js")"></script>
+        <!-- jQuery ui js -->
+        <script src="@Url.Content("~/Content/Site/js/jquery-ui.js")"></script>
+        <!-- owl carousel js -->
+        <script src="@Url.Content("~/Content/Site/js/owl.carousel.min.js")"></script>
+        <!-- jQuery validation -->
+        <script src="@Url.Content("~/Content/Site/js/jquery.validate.min.js")"></script>
+        <!-- google map -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRvBPo3-t31YFk588DpMYS6EqKf-oGBSI"></script>
+        <script src="@Url.Content("~/Content/Site/js/gmap.js")"></script>
+        <!-- mixit up -->
+        <script src="@Url.Content("~/Content/Site/js/wow.js")"></script>
+        <script src="@Url.Content("~/Content/Site/js/jquery.mixitup.min.js")"></script>
+        <script src="@Url.Content("~/Content/Site/js/jquery.fitvids.js")"></script>
+        <script src="@Url.Content("~/Content/Site/js/bootstrap-select.min.js")"></script>
+
+        <!-- revolution slider js -->
+        <script src="@Url.Content("~/Content/Site/assets/revolution/js/jquery.themepunch.tools.min.js")"></script>
+        <script src="@Url.Content("~/Content/Site/assets/revolution/js/jquery.themepunch.revolution.min.js")"></script>
+        <script src="@Url.Content("~/Content/Site/assets/revolution/js/extensions/revolution.extension.actions.min.js")"></script>
+        <script src="@Url.Content("~/Content/Site/assets/revolution/js/extensions/revolution.extension.carousel.min.js")"></script>
+        <script src="@Url.Content("~/Content/Site/assets/revolution/js/extensions/revolution.extension.kenburn.min.js")"></script>
+        <script src="@Url.Content("~/Content/Site/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js")"></script>
+        <script src="@Url.Content("~/Content/Site/assets/revolution/js/extensions/revolution.extension.migration.min.js")"></script>
+        <script src="@Url.Content("~/Content/Site/assets/revolution/js/extensions/revolution.extension.navigation.min.js")"></script>
+        <script src="@Url.Content("~/Content/Site/assets/revolution/js/extensions/revolution.extension.parallax.min.js")"></script>
+        <script src="@Url.Content("~/Content/Site/assets/revolution/js/extensions/revolution.extension.slideanims.min.js")"></script>
+        <script src="@Url.Content("~/Content/Site/assets/revolution/js/extensions/revolution.extension.video.min.js")"></script>
+
+        <!-- fancy box -->
+        <script src="@Url.Content("~/Content/Site/js/jquery.fancybox.pack.js")"></script>
+        <script src="@Url.Content("~/Content/Site/js/jquery.polyglot.language.switcher.js")"></script>
+        <script src="@Url.Content("~/Content/Site/js/nouislider.js")"></script>
+        <script src="@Url.Content("~/Content/Site/js/jquery.bootstrap-touchspin.js")"></script>
+        <script src="@Url.Content("~/Content/Site/js/SmoothScroll.js")"></script>
+        <script src="@Url.Content("~/Content/Site/js/jquery.appear.js")"></script>
+        <script src="@Url.Content("~/Content/Site/js/jquery.countTo.js")"></script>
+        <script src="@Url.Content("~/Content/Site/js/jquery.flexslider.js")"></script>
+        <script src="@Url.Content("~/Content/Site/js/imagezoom.js")"></script>
+        <script id="map-script" src="@Url.Content("~/Content/Site/js/default-map.js")"></script>
+        <script src="@Url.Content("~/Content/Site/js/custom.js")"></script>
+
+    </div>
+
+</body>
+</html>

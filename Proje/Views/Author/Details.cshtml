@@ -1,0 +1,58 @@
+﻿@model Proje.Models.Author
+<div class="modal-header" style="background-color:purple;color:white">
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <h2 class="modal-title" style="text-align:center">@Model.NameSurname</h2>
+</div>
+<div class="modal-body">
+    <table class="table table-bordered">
+        <!--satır 1-->
+        <tr>
+            <td style="font-weight:bold">Resim</td>
+            <td>
+                <img src="@Model.Image" />
+            </td>
+        </tr>
+
+        <!--satır 2-->
+        <tr>
+            <td style="font-weight:bold">Email</tdstyle="font-weight:bold">
+            <td>
+                @Model.Email
+            </td>
+        </tr>
+
+        <!--satır 3-->
+        <tr>
+            <td style="font-weight:bold">Hakkında</td>
+            <td>
+                @Model.About
+            </td>
+        </tr>
+
+        <!--satır 4-->
+        <tr>
+            <td style="font-weight:bold">Ekleme</td>
+            <td>
+                @Model.AddedBy
+            </td>
+            <td>
+                @Model.AddedDate
+            </td>
+        </tr>
+
+        <!--satır 5-->
+        <tr>
+            <td style="font-weight:bold">Güncelleme</td>
+            <td>
+                @Model.ModifyBy
+            </td>
+            <td>
+                @Model.ModifyDate
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" data-dismiss="modal" ><i class="material-icons">power_settings_new</i>Kapat</button>
+</div>
