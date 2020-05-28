@@ -29,6 +29,10 @@ namespace Proje.Controllers
             {
                 return RedirectToAction("Index", "Author");
             }
+            else if(new LoginState().IsLoginSuccess2(username,password))
+            {
+                return RedirectToAction("Yazar1", "Write");
+            }
             return RedirectToAction("Index","Login");
         }
     }

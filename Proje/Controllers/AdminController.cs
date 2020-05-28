@@ -13,7 +13,7 @@ namespace Proje.Controllers
         // GET: Admin
         public ActionResult Index()
         {
-            return View();     
+            return View(db.Admin.ToList());     //Yöneticileri listelemeye yarar
         }
 
         

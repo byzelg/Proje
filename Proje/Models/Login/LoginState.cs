@@ -20,5 +20,17 @@ namespace Proje.Models.Login
             }
             return false;
         }
+
+        public bool IsLoginSuccess2(string user, string pass)
+        {
+            Author resulttUser = db.Author.Where(x => x.NameSurname.Equals(user) && x.Password.Equals(pass)).FirstOrDefault();
+            if (resulttUser != null)
+            {
+                db.Entry(resulttUser).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                return true;
+            }
+            return false;
+        }
     }
 }
