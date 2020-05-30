@@ -9,12 +9,13 @@ namespace Proje.Controllers
     public class BlogController : Controller
     {
         // GET: Blog
+        [HttpPost]
         public ActionResult Index()
         {
             ViewBag.Title = "Narail | Blog";
             return View();
         }
-
+        
         public ActionResult Category()
         {
             return View();

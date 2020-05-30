@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>@(Html.Raw(ViewBag.title))</title>  <!--geldiği sayfanın başlığını kullanacak, controllerlarda belirtildi-->
-
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -16,6 +15,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body>
@@ -54,13 +56,13 @@
                     <div class="col-md-6 menu-column">
                         <nav class="main-menu">
                             @*<div class="navbar-header">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>*@
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>*@
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
 
@@ -71,11 +73,11 @@
                                     <li>
                                         <a href="@Url.Action("Index","About")">Hakkımızda</a>
                                         @*<ul>
-                                            <li><a href="about.html">Kimiz</a></li>
-                                            <li><a href="team.html">Takım</a></li>
-                                            <li><a href="testimonials.html">Testimonials</a></li>
-                                            <li><a href="error.html">404 Page</a></li>
-                                        </ul>*@
+                                                <li><a href="about.html">Kimiz</a></li>
+                                                <li><a href="team.html">Takım</a></li>
+                                                <li><a href="testimonials.html">Testimonials</a></li>
+                                                <li><a href="error.html">404 Page</a></li>
+                                            </ul>*@
                                     </li>
 
                                     <li class="dropdown">
@@ -104,11 +106,11 @@
                                     <li>
                                         <a href="@Url.Action("Index","About")">Hakkımızda</a>
                                         @*<ul>
-                                            <li><a href="about.html">Kimiz</a></li>
-                                            <li><a href="team.html">Takım</a></li>
-                                            <li><a href="testimonials.html">Testimonials</a></li>
-                                            <li><a href="error.html">404 Page</a></li>
-                                        </ul>*@
+                                                <li><a href="about.html">Kimiz</a></li>
+                                                <li><a href="team.html">Takım</a></li>
+                                                <li><a href="testimonials.html">Testimonials</a></li>
+                                                <li><a href="error.html">404 Page</a></li>
+                                            </ul>*@
                                     </li>
 
                                     <li class="dropdown">
@@ -142,7 +144,7 @@
 
 
         @RenderBody()          <!-- “<body></body>” etiketi içerisine "RenderBody()" kodu eklenerek View’den gelecek kodları çekiyorsunuz.-->
-                                <!--view içinde ilk tagda hangi layout ile çalıştığını görebilirsin (tüm Index viewler)-->
+        <!--view içinde ilk tagda hangi layout ile çalıştığını görebilirsin (tüm Index viewler)-->
 
 
         <footer class="main-footer">
@@ -282,7 +284,9 @@
                     </div>
                     <div class="pull-right get-text">
                         <ul>
-                            <li><a href="@Url.Action("Index","Login")">Giriş Yap</a></li>
+                            <li>
+                                <a href="@Url.Action("Index","Login")">Giriş Yap</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

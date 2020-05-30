@@ -39,12 +39,16 @@
             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                 <section class="news-section padd-2">
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                        <form id="blog">
-                            <textarea rows="30" cols="90"></textarea>
-                        </form>
-                    </div>
-                   
 
+                        @{
+                            if (IsPost)
+                            {
+                                string companyname = Request.Form["companyname"];
+                                <textarea disabled="disabled">@companyname</textarea>
+                            }
+                        }
+
+                    </div>
                     <ul class="page_pagination style-2 center">
                         <li><a href="#" class="tran3s"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
                         <li><a href="#" class="active tran3s">1</a></li><!--yazar1 için-->
@@ -69,7 +73,7 @@
 
                     <br><br>
 
-                </div> 
+                </div>
             </div>
         </div>
     </div>

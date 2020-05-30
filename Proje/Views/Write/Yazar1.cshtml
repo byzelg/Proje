@@ -9,12 +9,33 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 @using (Html.BeginForm("Index", "Blog", FormMethod.Post))
                 {
-                    <form>
-                        <textarea rows="30" cols="90"></textarea>
-                        <input type="submit" style="background-color:green;color:white" value="Kaydet" />
+                    <form method="post">
+                        <fieldset>
+                            <div>
+                                <textarea class="comment" id="CompanyName" name="CompanyName"></textarea>
+                            </div>
+                            <div>
+                                <label>&nbsp;</label>
+                                <input type="submit" value="Kayıt" class="submit" />
+                            </div>
+                        </fieldset>
                     </form>
                 }
             </div>
         </section>
     </div>
 </div>
+
+
+@*@{
+    if (IsPost)
+    {
+        string companyname = Request.Form["companyname"];
+
+        <text>
+            You entered:
+            <br />
+            Company Name: @companyname
+        </text>
+    }
+}*@
