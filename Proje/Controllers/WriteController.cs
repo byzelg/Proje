@@ -14,12 +14,5 @@ namespace Proje.Controllers
         {
             return View();
         }
-
-        //[HttpPost]
-        //public void Yazar1(string Text)
-        //{
-        //    Response.Write(Text);
-        //}
-
     }
 }

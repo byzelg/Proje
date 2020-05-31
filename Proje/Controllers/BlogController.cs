@@ -15,7 +15,7 @@ namespace Proje.Controllers
             ViewBag.Title = "Narail | Blog";
             return View();
         }
-        
+
         public ActionResult Category()
         {
             return View();
